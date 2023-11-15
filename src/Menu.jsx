@@ -1,4 +1,5 @@
 import Education from "./Education" ;
+import Experience from "./Experience";
 function Menu() {
     return (
         <div className="menu">
@@ -18,9 +19,9 @@ function Menu() {
                     <div></div> 
                 </div>
             </div>
-
+            
             <div className="personalDetailsC">
-                <h2><img width="40" height="40" src="https://img.icons8.com/cotton/40/business-contact--v2.png" alt="business-contact--v2"/>Personal Details</h2>
+                <h2><i className="fa-solid fa-circle-info" style={{color: "#ffffff"}}></i>Personal Details</h2>
 
                 <h3>Full Name</h3>
                 <input type="text" />
@@ -36,6 +37,7 @@ function Menu() {
             </div>
 
             <Education />
+        <Experience />
         </div>
     )
 }
