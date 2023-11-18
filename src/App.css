@@ -300,12 +300,18 @@ button:hover{
   background-color: #eff1f3;
   margin: 2rem 0;
 }
+.resume .resumeBody h3{
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  color: black;
+}
 /* .resumeBody h1,h2,h3,h4,h5,h6{
   color: black;
 } */
 .educationCR{
   width: 100%;
   display: flex;
+  margin: 1rem 0;
 }
 .educationCRL{
   width: 35%;

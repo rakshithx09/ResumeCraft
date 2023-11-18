@@ -1,8 +1,8 @@
 import Resume from "./Resume"
-function Content({personalDetails, setPersonalDetails}){
+function Content({personalDetails, setPersonalDetails, alignment, data}){
     return (
         <div className="content">
-           <Resume personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} /> 
+           <Resume personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} alignment={alignment} data={data} /> 
         </div>
     )
 }

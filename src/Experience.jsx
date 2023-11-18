@@ -41,7 +41,7 @@ const icon = {
     invisible: "https://img.icons8.com/material-sharp/24/invisible.png"
 
 }
-function retrieveExperience(experienceList, setExperienceList) {
+function retrieveExperience(experienceList, setExperienceList, setData) {
     const company = document.querySelector('.companyInput');
     const position = document.querySelector('.positionInput');
     const start = document.querySelector('.startInput');
@@ -59,7 +59,7 @@ function retrieveExperience(experienceList, setExperienceList) {
         description: description.value
     }]);
 }
-function Experience({personalDetails, setPersonalDetails}) {
+function Experience({personalDetails, setPersonalDetails, setData, data}) {
     const [addSection, setAddSection] = useState(false);
     const [experienceList, setExperienceList] = useState(list)
     return (
@@ -68,7 +68,7 @@ function Experience({personalDetails, setPersonalDetails}) {
                 <h2><i className="fa-solid fa-briefcase" style={{ color: "#ffffff" }}></i>Experience </h2>
 
                 {
-                    addSection ? <ExperienceForm personalDetails={personalDetails} setPersonalDetails={setPersonalDetails}/> :
+                    addSection ? <ExperienceForm personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} setData={setData} data={data} /> :
                         (<ul>
                             {
                                 experienceList.map((item) => {
