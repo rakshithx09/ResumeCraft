@@ -48,7 +48,7 @@ function retrieveEducation(educationList,setEducationList){
         isVisible:true,
     location:location.value}]);
 }
-function Education() {
+function Education({personalDetails, setPersonalDetails}) {
     const [addSection, setAddSection] = useState(false);
     const [educationList, setEducationList]=useState(list)
     return (
@@ -57,7 +57,7 @@ function Education() {
                 <h2><i className="fa-solid fa-graduation-cap" style={{color: "#ffffff" }}></i>Education </h2>
 
                 {
-                    addSection ? <EducationForm / > :
+                    addSection ? <EducationForm personalDetails={personalDetails} setPersonalDetails={setPersonalDetails}/ > :
                         (<ul>
                             {
                                 educationList.map((item) => {

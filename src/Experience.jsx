@@ -59,7 +59,7 @@ function retrieveExperience(experienceList, setExperienceList) {
         description: description.value
     }]);
 }
-function Experience() {
+function Experience({personalDetails, setPersonalDetails}) {
     const [addSection, setAddSection] = useState(false);
     const [experienceList, setExperienceList] = useState(list)
     return (
@@ -68,7 +68,7 @@ function Experience() {
                 <h2><i className="fa-solid fa-briefcase" style={{ color: "#ffffff" }}></i>Experience </h2>
 
                 {
-                    addSection ? <ExperienceForm /> :
+                    addSection ? <ExperienceForm personalDetails={personalDetails} setPersonalDetails={setPersonalDetails}/> :
                         (<ul>
                             {
                                 experienceList.map((item) => {

@@ -1,5 +1,5 @@
 
-function ExperienceForm() {
+function ExperienceForm({personalDetails, setPersonalDetails}) {
     return (<div className="educationFormC">
         <h3>Company</h3>
         <input type="text" className="companyInput" required/*  value="Dholakhpur Institute of Technology" */ />

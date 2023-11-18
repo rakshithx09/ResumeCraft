@@ -1,5 +1,5 @@
 
-function EducationForm() {
+function EducationForm({personalDetails, setPersonalDetails}) {
     return (<div className="educationFormC">
         <h3>School</h3>
         <input type="text" className="schoolInput"/*  value="Dholakhpur Institute of Technology" */ />
