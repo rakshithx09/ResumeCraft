@@ -47,7 +47,7 @@ function retrieveEducation(data,setData){
         start: start.value,
         degree: degree.value,
         to:end.value,
-        isVisible:true,
+        /* isVisible:true, */
     location:location.value
     };
     /* setData([...educationList, {key: uuid(),
@@ -88,7 +88,7 @@ function Education({personalDetails, setPersonalDetails, setData, data}) {
                         addSection ? 
                         <><button className='cancelBtn' onClick={() => { setAddSection(false); data[0].pop(); setData([data[0],data[1]]) }}>Cancel</button><button className='saveBtn' onClick={() => {retrieveEducation(data,setData); setAddSection(false); return; }}>Save</button></> 
                         : 
-                        <button className="addEducationButton" onClick={() => { setAddSection(true); data[0].push({ key: uuid()}); setData([data[0],data[1]]); console.log(data);return;  }}>Add Education</button>
+                        <button className="addEducationButton" onClick={() => { setAddSection(true); data[0].push({ key: uuid(), isVisible:true}); setData([data[0],data[1]]); console.log(data);return;  }}>Add Education</button>
                     }
                 </div>
             </div>

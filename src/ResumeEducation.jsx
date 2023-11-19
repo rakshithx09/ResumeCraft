@@ -3,7 +3,7 @@ function ResumeEducation({ personalDetails, setPersonalDetails, data }) {
         <div>
             {data[0].map((education) => {
                 
-                return (/* education.isVisible ? */ 
+                return (education.isVisible ? 
                  (
                         <div className="educationCR" key={education.key}>
                             <div className="educationCRL">
@@ -11,11 +11,11 @@ function ResumeEducation({ personalDetails, setPersonalDetails, data }) {
                                 <div className="locationR">{education.location}</div>
                             </div>
                             <div className="educationCRR">
-                                <p className="universityR"> {education.name} </p>
+                                <h3 className="universityR"> {education.name} </h3>
                                 <p className="universityInfoR"> {education.degree}</p>
                             </div>
                         </div>
-                ) /* : null */)
+                ) : null)
             })}
         </div>
     );
