@@ -7,8 +7,8 @@ function ResumeEducation({ personalDetails, setPersonalDetails, data }) {
                  (
                         <div className="educationCR" key={education.key}>
                             <div className="educationCRL">
-                                <div className="timeline">{education.start}-{education.to}</div>
-                                <div className="locationR">{education.location}</div>
+                                <div className="timeline"><p>{education.start}-{education.to}</p></div>
+                                <div className="locationR"><p>{education.location}</p></div>
                             </div>
                             <div className="educationCRR">
                                 <h3 className="universityR"> {education.name} </h3>

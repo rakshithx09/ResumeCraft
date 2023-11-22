@@ -250,9 +250,9 @@ button:hover{
 }
 .resume > .accent{
   height: 100%;
-  width: 40%;
+  min-width: 45%;
   background-color: #0e374e;
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -266,15 +266,17 @@ button:hover{
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   /* border: 2px solid white; */
 }
 .resume.leftAlign .socials, .resume.rightAlign .socials{
   flex-direction: column;
+  gap: 1rem;
 }
-.resume h1{
+.resume .accent h1{
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin:  0 auto 1.5rem;
+  /* margin-bottom: 0.5rem; */
   
 }
 /* .resume.topAlign h3{
@@ -311,13 +313,21 @@ button:hover{
   width: 100%;
   display: flex;
   margin: 1rem 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
 }
-.educationCRL{
+.educationCR p{
+  font-family: 'Nunito', sans-serif;
+}
+.resume.topAlign .educationCRL{
   padding-left: 2rem;
-  width: 35%;
+  width: 25%;
+}
+.resume.leftAlign .socials h3, .resume.rightAlign .socials h3{
+  font-size: 14px;
 }
 .educationCRR{
-  width: 65%;
+  width: 75%;
 }
 .educationCRR h3{
   color: #24242d;

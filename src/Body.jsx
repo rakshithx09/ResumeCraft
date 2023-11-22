@@ -7,77 +7,39 @@ import { v4 as uuid } from 'uuid';
 const educationList = [
     {
         key: uuid(),
-        name: "A",
-        start: 1,
-        to: 2,
-        isVisible:true,
-        location:"dholakhpur",
-        degree:"btech"
+        name: "London City University",
+        start: "08/2020",
+        to: "present",
+        isVisible: true,
+        location: "New York City, US",
+        degree: "PHd"
 
-    },
-    {
-        key: uuid(),
-        name: "B",
-        start: 1,
-        to: 2,
-        isVisible:true,
-        location:"dholakhpur",
-        degree:"btech"
-    },
-    {
-        key: uuid(),
-        name: "C",
-        start: 1,
-        to: 2,
-        isVisible:true,
-        location:"dholakhpur",
-        degree:"btech"
     }
 ];
 const experienceList = [
     {
         key: uuid(),
-        name: "A",
-        start: 1,
-        to: 2,
+        name: "London City University",
+        start: "08/2020",
+        to: "present",
         isVisible: true,
-        location: "dholakhpur",
-        position: "aaa",
-        description: "heyyeh"
+        location: "London",
+        position: "SDE",
+        description: "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android"
 
-    },
-    {
-        key: uuid(),
-        name: "A",
-        start: 1,
-        to: 2,
-        isVisible: true,
-        location: "dholakhpur",
-        position: "aaa",
-        description: "heyyeh"
-    },
-    {
-        key: uuid(),
-        name: "A",
-        start: 1,
-        to: 2,
-        isVisible: true,
-        location: "dholakhpur",
-        position: "aaa",
-        description: "heyyeh"
     }
 ];
 function Body() {
 
-    const [personalDetails, setPersonalDetails]= useState({name: "Marcus Aurelius",email:"marcusTheGreat@gmail.com", ph:"+44 7548822290", address:"Rome, Italy"});
-    const [alignment, setAlignment]= useState(1);
-    const [data, setData] = useState([educationList,experienceList]);
-    return ( 
-       <main>
-           <Menu personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} setAlignment={setAlignment} setData={setData} data={data} />
-           <Content personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} alignment={alignment} data={data} />
-       </main>
+    const [personalDetails, setPersonalDetails] = useState({ name: "Marcus Aurelius", email: "marcusTheGreat@gmail.com", ph: "+44 7548822290", address: "Rome, Italy" });
+    const [alignment, setAlignment] = useState(1);
+    const [data, setData] = useState([educationList, experienceList]);
+    return (
+        <main>
+            <Menu personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} setAlignment={setAlignment} setData={setData} data={data} />
+            <Content personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} alignment={alignment} data={data} />
+        </main>
     )
-  }
-  
-  export default Body
+}
+
+export default Body
